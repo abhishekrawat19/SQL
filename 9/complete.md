@@ -1,6 +1,6 @@
-# Complete SQL Course Notes
+# Complete SQL Notes for Interviews
 
-This document contains a comprehensive set of notes covering fundamental to advanced SQL concepts, including DDL, DML, TCL, DCL, joins, subqueries, functions, and normalization.
+This document contains a comprehensive set of notes covering fundamental to advanced SQL concepts. It is designed for interview preparation for roles such as Full-Stack Developer, Data Analyst, and Machine Learning Engineer. The topics range from basic DDL and DML commands to advanced concepts like joins, subqueries, window functions, and normalization.
 
 ---
 
