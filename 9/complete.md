@@ -28,7 +28,6 @@ This document contains a comprehensive set of notes covering fundamental to adva
 ---
 
 ## DAY 1: Introduction to SQL and Databases
-_Thursday, July 16, 2020_
 
 ### SQL (Structured Query Language)
 SQL is the standard language used to communicate and interact with a relational database management system (RDBMS).
@@ -64,7 +63,6 @@ An RDBMS that follows the **Relational Model** (designed by E.F. Codd) stores al
 ---
 
 ## DAY 2: Relational Model and Datatypes
-_Friday, July 17, 2020_
 
 ### Table
 > "A Table is a logical organization of data which consists of Columns & Rows."
@@ -95,7 +93,6 @@ A datatype specifies the type of data that a column can hold.
 ---
 
 ## DAY 3: Numeric and Date Datatypes
-_Monday, July 20, 2020_
 
 ### `NUMBER(precision, scale)`
 Used to store numeric values.
@@ -112,7 +109,6 @@ Used to store dates. In Oracle, the default format is `'DD-MON-YY'`.
 ---
 
 ## DAY 4: Constraints
-_Tuesday, July 21, 2020_
 
 ### Constraints
 > "A constraint is a rule given to a column for validation."
@@ -136,7 +132,6 @@ _Tuesday, July 21, 2020_
 ---
 
 ## DAY 5: Data Query Language (DQL)
-_Wednesday, July 22, 2020_
 
 ### Overview of SQL Statements
 1.  **DDL** (Data Definition Language)
@@ -167,7 +162,6 @@ SELECT DISTINCT BRANCH FROM STUDENT;
 ---
 
 ## DAY 6: Expressions, Aliases, and Selection
-_Thursday, July 23, 2020_
 
 ### Expressions
 An expression is a combination of operands and operators (e.g., `SAL * 12`).
@@ -188,7 +182,6 @@ SELECT ENAME FROM EMP WHERE SAL > 3000;
 ---
 
 ## DAY 7: SQL Operators
-_Friday, July 24, 2020_
 
 ### Operator Categories
 * **Arithmetic:** `+`, `-`, `*`, `/`
@@ -209,7 +202,6 @@ WHERE JOB = 'MANAGER' AND (DEPTNO = 10 OR DEPTNO = 20);
 ---
 
 ## DAY 8: Special Operators
-_Monday, July 27, 2020_
 
 * **`IN`**: Checks if a value matches any value in a list. Shorthand for multiple `OR`s.
   ```sql
@@ -233,7 +225,6 @@ _Monday, July 27, 2020_
 ---
 
 ## DAY 9: Functions
-_Tuesday, July 28, 2020_
 
 ### Multi-Row (Aggregate) Functions
 These functions operate on a group of rows and return a single result.
@@ -252,7 +243,6 @@ SELECT MAX(SAL) FROM EMP WHERE JOB = 'MANAGER';
 ---
 
 ## DAY 10: Grouping and Filtering
-_Wednesday, July 29, 2020_
 
 ### `GROUP BY` Clause
 Arranges identical data into groups, often used with aggregate functions.
@@ -282,7 +272,6 @@ HAVING COUNT(*) >= 3;
 ---
 
 ## DAY 11: Subqueries
-_Thursday, July 30, 2020_
 
 > "A query written inside another query is known as a Subquery."
 
@@ -295,7 +284,6 @@ SELECT ENAME FROM EMP WHERE SAL < (SELECT SAL FROM EMP WHERE ENAME = 'MILLER');
 ---
 
 ## DAY 12: Advanced Subqueries
-_Saturday, August 1, 2020_
 
 Subqueries are powerful for cross-table conditions where the filter criteria for one table depends on a value from another table.
 ```sql
@@ -306,7 +294,6 @@ SELECT DNAME FROM DEPT WHERE DEPTNO = (SELECT DEPTNO FROM EMP WHERE ENAME = 'MIL
 ---
 
 ## DAY 13: Types of Subqueries
-_Monday, August 3, 2020_
 
 * **Single-Row Subquery:** Returns one value. Can use operators like `=, >, <`.
 * **Multi-Row Subquery:** Returns multiple values. Must use operators like `IN, ANY, ALL`.
@@ -319,7 +306,6 @@ SELECT MAX(SAL) FROM EMP WHERE SAL < (SELECT MAX(SAL) FROM EMP);
 ---
 
 ## DAY 14: Employee and Manager Relations
-_Tuesday, August 4, 2020_
 
 Subqueries are essential for navigating hierarchical relationships in the same table.
 ```sql
@@ -333,7 +319,6 @@ SELECT ENAME FROM EMP WHERE MGR = (SELECT EMPNO FROM EMP WHERE ENAME = 'KING');
 ---
 
 ## DAY 15-16: Joins
-_Wednesday, Aug 5 - Thursday, Aug 6, 2020_
 
 > "A Join is the process of retrieving data from multiple tables simultaneously."
 * **`INNER JOIN`**: Returns only matching records from both tables.
@@ -350,7 +335,6 @@ FROM EMP E1 JOIN EMP E2 ON E1.MGR = E2.EMPNO;
 ---
 
 ## DAY 17: Correlated Subqueries
-_Friday, August 7, 2020_
 
 > "A subquery where the inner query and the outer query are dependent on each other."
 
@@ -363,7 +347,6 @@ SELECT DNAME FROM DEPT d WHERE EXISTS (SELECT 1 FROM EMP e WHERE e.DEPTNO = d.DE
 ---
 
 ## DAY 18-19: Single-Row Functions
-_Monday, Aug 10 - Tuesday, Aug 11, 2020_
 
 These functions operate on a single row and return one result per row.
 
@@ -382,7 +365,6 @@ These functions operate on a single row and return one result per row.
 ---
 
 ## DAY 20-21: DDL, DML, & TCL
-_Wednesday, Aug 12 - Thursday, Aug 13, 2020_
 
 ### DDL (Data Definition Language)
 Manages the structure of database objects. Statements are **auto-commit**.
@@ -401,7 +383,6 @@ Manages DML transactions.
 ---
 
 ## DAY 22: Normalization
-_Friday, August 14, 2020_
 
 > "Normalization is the process of reducing a large table into smaller tables to remove data redundancy and improve data integrity."
 
